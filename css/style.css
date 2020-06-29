@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;450;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', 'arial';
+    list-style: none;
+}
+
+/* Vermelho: #ca3b3a
+Preto: #161616
+Cinza: #707070 */
+
+body {
+    color: #161616;
+}
+
+/* ------ Start of NAV BAR ------ */
+    header nav {
+        display: flex;
+        padding: .1em;
+        margin: 0.4em 0.8em;
+        justify-content: space-between;
+        align-items: center;
+        /* background: black;     */
+    }
+    
+    header nav div.logo {
+        height: 100%;
+    }
+    
+    header nav div.logo img {
+        height: 30px;
+    }
+    
+    header nav div.contents ul {
+        display: none;
+    }
+    
+    header nav div.contents ul li a {
+        padding: .5em;
+        margin: 0 .1em;
+        text-decoration: none;
+        color: black;
+    }
+    
+    .icons{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .icons span {
+        align-items: center;
+        width: 15px;
+        height: 15px;
+        background: black;
+        border-radius: 50%;
+        margin: 0 10px;
+    }
+    
+    /* ------ End of NAV BAR ------ */
+
+    /* ------ Start of HOME section ------ */
+
+    section#home {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 5% auto;
+        width: 100%;
+        background-image: linear-gradient(white, rgba(0, 0, 0, 0.02));
+    }
+
+    section#home div.productimage {
+        margin: 0 0 10% 0;
+        animation: float 5s ease-in-out infinite;   
+        animation-duration: 5s;
+        transform: translateY(0);
+    }
+
+    section#home div.productimage img {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        width: 262px;
+    }
+    
+    section#home div.content {
+        display: flex;
+        flex-direction: column;
+        margin: 0 15%;
+    }
+    
+    section#home div.content .title, .rating, .driver, .technical, .pricing{
+        margin: .4em 0;
+    }
+
+    section#home div.content h1{
+        display: flex;
+        justify-content: center;
+        text-transform: uppercase;
+        font-size: 1.6em;
+    }
+
+    section#home div.content .title h1{
+        color: #ca3b3a;
+    }
+
+    section#home div.content h2{
+        font-size: .9em;
+
+    }
+
+    section#home div.content h3{
+        font-size: .7em;
+        font-weight: 600;
+        color: #707070;
+    }
+
+    section#home div.content .pricing{
+        display: flex;
+        padding: .2em;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    section#home div.content .pricing a{
+        display: flex;
+        justify-content: center;
+        text-decoration: none;
+        color: white;
+        padding: .8em 1em;
+        background: #ca3b3a;
+        border-radius: 20px;
+        transition: .3s ease-in;
+    }
+
+    section#home div.content .pricing a:hover{
+        background: #ec3737;
+    }
+
+    
+    /* ------ End of HOME section ------ */
+
+    /* KEYFRAMES */
+    @keyframes float{
+        0%{
+            transform: translateZ(0);
+        }
+        65%{
+            transform: translatey(15px);
+        }
+        
+        100%{
+            transform: translateZ(0);
+        }
+
+    }
+
+
+    /* ------ Start of INFORMATIONS section ------ */
+    
+    section#informations {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 5% 5%;
+        background: whitesmoke;
+        border-radius: 10px;
+    }
+
+    section#informations div.informations ul {
+        margin: 2em 10%;
+        display: flex;
+        align-items: center;
+        
+    }
+
+    section#informations div.informations ul img {
+        width: 1.5em;
+    }
+
+        /* ------ END of INFORMATIONS section ------ */
+
+        @media screen and (min-width: 650px){
+
+
+            header nav div.contents ul {
+                display: flex;
+            }
+            
+            section#home {
+                flex-direction: row;
+            }
+
+            section#home div.productimage {
+                margin: 10% 0 ;
+            }
+
+            section#home div.content{
+                margin: 0 5%;
+                padding: 2em;
+                border-radius: 10px;  
+                box-shadow: 0 30px 60px rgba(0,0,0,0.12);
+                background-color: rgb(254, 254, 254);
+                border: white;
+            }
+                
+
+            section#informations{
+                flex-direction: column;
+            }
+
+            section#informations div.informations ul{
+                flex-direction: row;
+            }
+
+        }
+
+        @media screen and (min-width: 850px){
+            header nav {
+                margin: 0.4em 10%;
+            }
+            
+            section#home {
+                margin: 0;
+                justify-content: space-around;
+                align-items: center;
+            }
+
+            section#home div.content{
+                margin: 0;
+                /* box-shadow: 0 30px 30px rgba(0,0,0,.02), 0 0 8px rgba(0,0,0,.03), 0 1px 0 rgba(0,0,0,.05); */
+                /* box-shadow: 0 30px 60px rgba(0,0,0,0.12); */
+                /* box-shadow: var(--shadow-large); */
+            }
+
+            section#home div.productimage img {
+                width: 380px;
+            }
+
+            section#informations div.informations ul {
+                flex-direction: row;
+            }
+
+            section#informations div.informations{
+                display: flex
+                
+            }
+
+        }
